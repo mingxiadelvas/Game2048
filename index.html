@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <title>2048</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+
+<body>
+  <!-- Devoir de Ming-Xia Delvas et Calin Popa -->
+  <div id="header"></div>
+  <table id="grid"></table>
+  <div id="footer"></div>
+  <script src="index.js"></script>
+  <script type="text/babel">
+
+    class Header extends React.Component {
+      render() {
+        return (
+          <div className="header">
+            <h1 className="header_title">2048</h1>
+            <p className="header_intro">
+              Join the tiles, get to 2048!
+            </p>
+          </div>
+
+        );
+      }
+    }
+
+    class Footer extends React.Component {
+      render() {
+        return (
+          <div className="footer">
+            <p className="footer_how-to-play">
+              <span className="footer_emphasized-text">HOW TO PLAY:</span>
+              Use your
+              <span className="footer_emphasized-text">arrow keys</span>
+              to move the tiles. When two tiles with the same number touch, they
+              <span className="footer_emphasized-text">merge into one!</span>
+            </p>
+            <p className="footer_attribution">
+              <span>Ming-Xia Delvas <strong>20104038</strong> and Calin Popa <strong>20158726</strong></span>
+            </p>
+          </div>
+        );
+      }
+    }
+
+    ReactDOM.render(<Header />, document.getElementById("header"));
+    ReactDOM.render(<Footer />, document.getElementById("footer"));
+  </script>
+</body>
+
+</html>
